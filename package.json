@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "tailwindcss": "^4.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:css": "npx @tailwindcss/cli -i ./src/styles.css -o ./public/index.css --watch"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +37,8 @@
   },
   "devDependencies": {
     "web-vitals": "^4.2.4"
-  }
+  },
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ]
 }
